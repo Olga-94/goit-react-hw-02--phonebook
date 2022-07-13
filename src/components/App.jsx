@@ -46,6 +46,7 @@ export class App extends Component  {
 
   render() {
     const visibleContacts = this.getVisibleContact();
+
     return (
       <Box 
       width="500px"
@@ -58,11 +59,11 @@ export class App extends Component  {
       borderRadius="4px"
       flexDirection="column"
       >
- <Title title={'Phonebook'} />
- <Form onSubmit={this.addContact} />
- <Title title={'Contacts'} /> 
- <Filter value={this.state.filter} onChange={this.changeFilter} />
- <ContactList contacts={visibleContacts} onDeleteContact={this.deleteContact} />
+      <Title title={'Phonebook'} />
+      <Form onSubmit={this.addContact} />
+      <Title title={'Contacts'} /> 
+      <Filter value={this.state.filter} onChange={this.changeFilter} />
+      <ContactList contacts={visibleContacts} onDeleteContact={this.deleteContact} />
      </Box>
     );
   }
